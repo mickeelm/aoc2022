@@ -4,11 +4,11 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 
-name:           aoc
+name:           day02
 version:        0.1.0.0
-description:    Please see the README on GitHub at <https://github.com/githubuser/aoc-hs#readme>
-homepage:       https://github.com/githubuser/aoc#readme
-bug-reports:    https://github.com/githubuser/aoc/issues
+description:    Please see the README on GitHub at <https://github.com/githubuser/day02-hs#readme>
+homepage:       https://github.com/githubuser/day02#readme
+bug-reports:    https://github.com/githubuser/day02/issues
 author:         Author name here
 maintainer:     example@example.com
 copyright:      2021 Author name here
@@ -19,40 +19,40 @@ extra-source-files:
 
 source-repository head
   type: git
-  location: https://github.com/githubuser/aoc
+  location: https://github.com/githubuser/day02
 
 library
   exposed-modules:
       Lib
   other-modules:
-      Paths_aoc
+      Paths_day02
   hs-source-dirs:
       src
   build-depends:
       base >=4.7 && <5
   default-language: Haskell2010
 
-executable aoc
+executable day02
   main-is: Main.hs
   other-modules:
-      Paths_aoc
+      Paths_day02
   hs-source-dirs:
       app
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      aoc
-    , base >=4.7 && <5
+      base >=4.7 && <5
+    , day02
   default-language: Haskell2010
 
-test-suite aoc-test
+test-suite day02-test
   type: exitcode-stdio-1.0
   main-is: Spec.hs
   other-modules:
-      Paths_aoc
+      Paths_day02
   hs-source-dirs:
       test
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      aoc
-    , base >=4.7 && <5
+      base >=4.7 && <5
+    , day02
   default-language: Haskell2010

@@ -1,12 +1,12 @@
-module Lib (aoc) where
+module Lib (day01) where
 
 import Data.List (sort)
 import System.Environment (lookupEnv)
 
 type Input = [Int]
 
-aoc :: IO ()
-aoc = do
+day01 :: IO ()
+day01 = do
   input <- readInput
   part <- lookupEnv "part"
   print $ case part of
