@@ -1,9 +1,7 @@
-module Lib (day01) where
+module Lib (day01, solve1, solve2) where
 
 import Data.List (sort)
 import System.Environment (lookupEnv)
-
-type Input = [Int]
 
 day01 :: IO ()
 day01 = do
@@ -13,14 +11,14 @@ day01 = do
     Just "part2" -> solve2 input
     _ -> solve1 input
 
-solve1 :: [Int] -> Int
-solve1 = maximum
+solve1 :: String -> Int
+solve1 = maximum . parseInput
 
-solve2 :: [Int] -> Int
-solve2 = sum . take 3 . reverse . sort
+solve2 :: String -> Int
+solve2 = sum . take 3 . reverse . sort . parseInput
 
-readInput :: IO Input
-readInput = parseInput <$> readFile "input.txt"
+readInput :: IO String
+readInput = readFile "input.txt"
 
 parseInput :: String -> [Int]
 parseInput = map sum . chunked . lines

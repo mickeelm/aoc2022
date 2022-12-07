@@ -38,10 +38,12 @@ executables:
 tests:
   day01-test:
     main:                Spec.hs
-    source-dirs:         test
+    source-dirs:         test, src
     ghc-options:
     - -threaded
     - -rtsopts
     - -with-rtsopts=-N
     dependencies:
-    - day01
+      - HUnit
+      - test-framework
+      - test-framework-hunit
